@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Contact
-permalink: /download/
+permalink: /contact/
 published: true
 ---
 
