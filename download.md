@@ -1,7 +1,8 @@
 ---
 layout: page
-title: Download
+title: Contact
 permalink: /download/
+published: true
 ---
 
 <span class="page-tagline">Loved it? Download DevJournal</span>
