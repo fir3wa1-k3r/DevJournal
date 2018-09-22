@@ -7,7 +7,7 @@ published: true
 This is a writeup for the machine olympus from HackTheBox and also my first security blogpost.
   **Lets get started** 
 
-## Step 1: Recon<br>
+## Step 1: Initial Recon<br>
 
 So now lets perform a nmap scan on the host ip which is 10.10.10.83. The nmap command is given below:<br>
     `nmap -sC -sv -oA default -n 10.10.10.83`
