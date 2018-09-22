@@ -8,7 +8,8 @@ This is a writeup for the machine olympus from HackTheBox and also my first secu
   **Lets get started** 
 
 ## Step 1: Recon<br>
-	So now lets perform a nmap scan on the host ip which is 10.10.10.83. The nmap command is given below:
+
+So now lets perform a nmap scan on the host ip which is 10.10.10.83. The nmap command is given below:
     `nmap -sC -sv -oA default -n 10.10.10.83`
 <br>The scan output from nmap is shown below:
 	![1](https://fir3wa1-k3r.github.io/imgs/olympus_1.png)
