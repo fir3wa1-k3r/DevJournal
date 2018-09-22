@@ -12,5 +12,4 @@ This is a writeup for the machine olympus from HackTheBox and also my first secu
 So now lets perform a nmap scan on the host ip which is 10.10.10.83. The nmap command is given below:<br>
     `nmap -sC -sv -oA default -n 10.10.10.83`
 <br>The scan output from nmap is shown below:<br>
-
 ![1](https://fir3wa1-k3r.github.io/imgs/olymupus_1.png)
