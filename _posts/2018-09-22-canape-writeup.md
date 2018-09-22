@@ -2,7 +2,7 @@
 published: true
 ---
 
-# ->HackTheBox Canape Writeup<-
+# HackTheBox Canape Writeup
 
 This is a writeup for the machine olympus from HackTheBox and also my first security blogpost.<br>
   **Lets get started** 
