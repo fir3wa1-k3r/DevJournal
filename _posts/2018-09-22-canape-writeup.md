@@ -13,4 +13,6 @@ So now lets perform a nmap scan on the host ip which is 10.10.10.83. The nmap co
     `nmap -sC -sv -oA default -n 10.10.10.83`
 <br>The scan output from nmap is shown below:<br>
 
-![alt text](https://github.com/fir3wa1-k3r.github.io/imgs/olymupus_1.png "nmap scan")
+![alt text][olymupus_1]
+
+[olymupus_1]: https://github.com/fir3wa1-k3r.github.io/imgs/olymupus_1.png "nmap scan"
