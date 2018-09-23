@@ -32,7 +32,9 @@ And concurrently when we run gobuster for directory bruteforcing that resulted i
 After performing a stego analysis on the images i found nothing. Then i jumped to analyse the response from the web server.Then by looking into the headers, i found that XDebug is enabled in the server, which can allow remote debugging facility for developers.<br>
 > For more info about XDebug check [here](https://xdebug.org/docs/).
 
-![3](https://fir3wa1-k3r.github.io/imgs/olympus_3.png)
+<p align="center">
+  <img width="656" height="398" src="https://fir3wa1-k3r.github.io/imgs/olympus_3.png">	
+</p>
 
 
 
