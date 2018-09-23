@@ -16,13 +16,15 @@ So now lets perform a nmap scan on the host ip which is 10.10.10.83. The nmap co
 
 As we see it has 3 open ports and one filtered port.
 
-`22/tcp		filtered	ssh`
-`53/tcp		open		domain`
-`80/tcp		open		http`
-`2222/tcp	open		ssh`
+`22/tcp		filtered	ssh`<br>
+`53/tcp		open		domain`<br>
+`80/tcp		open		http`<br>
+`2222/tcp	open		ssh`<br>
 
 Here the port 22 is being filtered which means that nmap is unable to find out whether the port is open or not. And port 53 which has to be using UDP protocol is now using TCP, there is something fishy here, lets get to it later.
 Here is the website when we check out the http service on the host
 ![2](https://fir3wa1-k3r.github.io/imgs/olympus_2.png)
+
+And 
 
 
