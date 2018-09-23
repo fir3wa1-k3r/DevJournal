@@ -44,3 +44,9 @@ Hence we can utilize this service to get initial foothold in the machine. The se
   <img width="1000" height="255" src="https://fir3wa1-k3r.github.io/imgs/olympus_4.png">	
 </p>
 
+We can also see that the `XDEBUG_SESSION` cookie is being set by the server and it enable us to utilize the feature of remote debugging. Hence we can potentially exploit the service using eval funtion.<br>
+
+<p align="center">
+  <img width="656" height="398" src="https://fir3wa1-k3r.github.io/imgs/olympus_5.png">
+</p>
+
