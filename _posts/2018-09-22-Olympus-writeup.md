@@ -50,3 +50,8 @@ We can also see that the `XDEBUG_SESSION` cookie is being set by the server and 
   <img width="656" height="398" src="https://fir3wa1-k3r.github.io/imgs/olympus_5.png">
 </p>
 
+I have written a simple python script which sends the payload to the server which then executes code. Now we have RCE(Remote Code Execution) on the server.
+
+<p align="center">
+  <img width="656" height="398" src="https://fir3wa1-k3r.github.io/imgs/olympus_6.png">
+</p>
