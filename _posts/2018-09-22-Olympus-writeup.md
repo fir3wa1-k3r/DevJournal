@@ -22,7 +22,7 @@ As we see it has 3 open ports and one filtered port.
 `2222/tcp	open		ssh`<br>
 
 Here the port 22 is being filtered which means that nmap is unable to find out whether the port is open or not. And port 53 which has to be using UDP protocol is now using TCP, there is something fishy here, lets get to it later.
-Here is the website when we check out the http service on the host
+Here is the image from the website when we check out the http service on the host
 <br>
 ![2](https://fir3wa1-k3r.github.io/imgs/olympus_2.png)
 
