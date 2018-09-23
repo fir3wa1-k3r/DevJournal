@@ -29,12 +29,18 @@ Here is the image from the website when we check out the http service on the hos
 </p>
 
 And concurrently when we run gobuster for directory bruteforcing that resulted in the `index.php` page which is the redirection to the original homepage.<br>
-After performing a stego analysis on the images i found nothing. Then i jumped to analyse the response from the web server.Then by looking into the headers, i found that XDebug is enabled in the server, which can allow remote debugging facility for developers.<br>
+After performing a stego analysis on the images i found nothing. Then i jumped to analyse the response from the web server.Then by looking into the header `Xdebug: 2.5.5`, we can get to know that XDebug is enabled in the server, which can allow remote debugging facility for developers.<br>
 > For more info about XDebug check [here](https://xdebug.org/docs/).
 
 <p align="center">
   <img width="656" height="398" src="https://fir3wa1-k3r.github.io/imgs/olympus_3.png">	
 </p>
 
+Hence we can utilize this service to get initial foothold in the machine. The service can be exploited by sending the specially crafted http request to the server to connect back to port 9000. Then we can get Remote Code Execution using the eval command in php.
 
+> For more information please visit [here](https://paper.seebug.org/397/)
+
+<p align="center">
+  <img width="656" height="398" src="https://fir3wa1-k3r.github.io/imgs/olympus_3.png">	
+</p>
 
