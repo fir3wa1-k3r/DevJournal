@@ -41,6 +41,6 @@ Hence we can utilize this service to get initial foothold in the machine. The se
 > For more information about exploiting the Xdebug service please visit [here](https://paper.seebug.org/397/)
 
 <p align="center">
-  <img width="800" height="255" src="https://fir3wa1-k3r.github.io/imgs/olympus_4.png">	
+  <img width="1000" height="255" src="https://fir3wa1-k3r.github.io/imgs/olympus_4.png">	
 </p>
 
