@@ -26,6 +26,10 @@ Here is the image from the website when we check out the http service on the hos
 <br>
 ![2](https://fir3wa1-k3r.github.io/imgs/olympus_2.png)
 
-And 
+And concurrently when we run gobuster for directory bruteforcing that resulted in the `index.php` page which is the redirection to the original homepage.<br>
+After performing a stego analysis on the images i found nothing. Then i jumped to analyse the response from the web server.Then by looking into the headers, i found that XDebug is enabled in the server, which can allow remote debugging facility for developers.<br>
+For more info about XDebug check [here](https://xdebug.org/docs/)<br>
+![3](https://fir3wa1-k3r.github.io/imgs/olympus_3.png)
+
 
 
