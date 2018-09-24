@@ -61,3 +61,11 @@ After enumerating for a some time i found user zeus on the box. So i navigated t
 <p align="center">
   <img width="900" height="18" src="https://fir3wa1-k3r.github.io/imgs/olympus_7.png">
 </p>
+
+Looks like its a packet capture file. When we open this caputure file in `Wireshark` we see a lot of deauth and handshake frames and as we carefully examine through the file in Wireshark we can actually see something about BSSID and it was mentioned as `Too_cl0se_to_th3_Sun`. Then i got to know that its some kind of wireless WPA capture file using which i can crack the WPA keys.<br>
+So i fired up my **aircrack-ng**<br>
+
+`a`
+
+
+
