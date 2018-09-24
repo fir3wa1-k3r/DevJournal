@@ -73,4 +73,8 @@ Which took me around 20 mins to crack the WPA key according to my system specs. 
   <img width="294" height="30" src="https://fir3wa1-k3r.github.io/imgs/olympus_8.png">
 </p>
 
+After this step, there is a little bit of guessing required for the ssh user. Hence according to the WPA passphrase we should guess the user for the ssh was icarus.
+
+> The machine was also vulnerable for ssh user enumeration vulnerability. For more information please check [here](https://www.exploit-db.com/exploits/45233/)
+
 
