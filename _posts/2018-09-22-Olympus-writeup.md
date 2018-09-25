@@ -96,8 +96,10 @@ Hence i performed a DNS zone transfer using this command:<br>
 `dig` is an awesome tool which can perform some DNS related stuff like query the DNS servers for records and even for network troubleshooting.
 
 <p align="center">
-  <img width="1000" height="411" src="https://fir3wa1-k3r.github.io/imgs/olympus_10.png">
+  <img width="1100" height="411" src="https://fir3wa1-k3r.github.io/imgs/olympus_10.png">
 </p>
+
+
 
 
 
