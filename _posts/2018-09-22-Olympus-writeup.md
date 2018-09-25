@@ -128,6 +128,8 @@ Now i started enumerating to escalate my privileges. I ran the `LinEnum.sh` scri
   <img width="409" height="41" src="https://fir3wa1-k3r.github.io/imgs/olympus_14.png">
 </p>
 <br>
+> If you want to know more about docker, check [here](https://searchitoperations.techtarget.com/definition/Docker)<br>
+
 If the current user is a member of docker group then its a way more easy to get root in the machine. As we use `groups` command we can see that user prometheus is a member of docker group. We can also see what container images are running in the system currently. This can be done using the command:<br>
 `docker images` or `docker container ls`
 <br>
@@ -135,6 +137,21 @@ If the current user is a member of docker group then its a way more easy to get 
   <img width="855" height="95" src="https://fir3wa1-k3r.github.io/imgs/olympus_15.png">
 </p>
 <br>
+The privesc is very easy in this machine. This is just one command which can give you root shell:<br>
+`$docker run -it crete bash`<br>
+The i and t switch will give you the interactive tty shell running as the root.<br>
+<p align="center">
+  <img width="855" height="95" src="https://fir3wa1-k3r.github.io/imgs/olympus_16.png">
+</p>
+It can also be performed mounting the root file system into some directory and then reading the root.txt file.<br>
+`$docker run -v /:/mnt/MountDirectory -it crete bash`<br>
+Then it mounts the root file system into the directory `/mnt/MountDirectory/` and hence you can get read the root.txt file.
+
+##I would like to thank my buddy payload, Teck_K2 and ippsec and many others for helping and supporing me.
+
+
+Thats it, hope you enjoyed it.<br>
+**Thanks for reading, STAY TUNED..!!!**
 
 
 
