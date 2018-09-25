@@ -77,8 +77,9 @@ After this step, there is a little bit of guessing required for the ssh user. He
 
 > The machine was also vulnerable for ssh user enumeration vulnerability. For more information please check [here](https://www.exploit-db.com/exploits/45233/)<br>
 
-Now we login into ssh as the user icarus using `$ssh icarus@10.10.10.83 -p 2222` with the password `Too_cl0se_to_th3_Sun`. As we get into the machine and enumerate the files in the home directory we can see a file called `help_of_the_gods.txt` which showed us the whole new path towards conquering this machine.
+Now we login into ssh as the user icarus using `$ssh icarus@10.10.10.83 -p 2222` with the password `Too_cl0se_to_th3_Sun`. As we get into the machine and enumerate the files in the home directory we can see a file called `help_of_the_gods.txt` which showed us the whole new path towards conquering this machine.<br>
 
 <p align="center">
   <img width="654" height="305" src="https://fir3wa1-k3r.github.io/imgs/olympus_9.png">
 </p>
+
