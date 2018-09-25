@@ -83,3 +83,8 @@ Now we login into ssh as the user icarus using `$ssh icarus@10.10.10.83 -p 2222`
   <img width="654" height="305" src="https://fir3wa1-k3r.github.io/imgs/olympus_9.png">
 </p>
 
+This text file mentioned something about the domain `ctfolympus.htb`. So i went on and added this domain to my host file which is located in `/etc/hosts`<br>
+{% highlight ruby %}
+127.0.0.1		localhost		
+10.10.10.83		ctfolympus.htb		#This one
+{% endhighlight %}
