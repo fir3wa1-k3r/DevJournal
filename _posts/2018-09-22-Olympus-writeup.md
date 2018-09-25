@@ -132,7 +132,7 @@ If the current user is a member of docker group then its a way more easy to get 
 `docker images` or `docker container ls`
 <br>
 <p align="center">
-  <img width="409" height="41" src="https://fir3wa1-k3r.github.io/imgs/olympus_15.png">
+  <img width="855" height="95" src="https://fir3wa1-k3r.github.io/imgs/olympus_15.png">
 </p>
 <br>
 
