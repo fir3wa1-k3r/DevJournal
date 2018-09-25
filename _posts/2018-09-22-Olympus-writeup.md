@@ -139,7 +139,7 @@ The privesc is very easy in this machine. This is just one command which can giv
 `$docker run -it crete bash`<br>
 The i and t switch will give you the interactive tty shell running as the root.<br>
 <p align="center">
-  <img width="855" height="95" src="https://fir3wa1-k3r.github.io/imgs/olympus_16.png">
+  <img width="205" height="62" src="https://fir3wa1-k3r.github.io/imgs/olympus_16.png">
 </p>
 It can also be performed mounting the root file system into some directory and then reading the root.txt file.<br>
 `$docker run -v /:/mnt/MountDirectory -it crete bash`<br>
