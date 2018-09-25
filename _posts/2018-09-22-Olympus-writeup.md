@@ -145,7 +145,7 @@ It can also be performed mounting the root file system into some directory and t
 `$docker run -v /:/mnt/MountDirectory -it crete bash`<br>
 Then it mounts the root file system into the directory `/mnt/MountDirectory/` and hence you can get read the root.txt file.
 
-## I would like to thank my buddy payload, Teck_K2, ippsec and many others for helping and supporing me.
+### I would like to thank my buddy payload, Teck_K2, ippsec and many others for helping and supporing me.
 
 
 Thats it, hope you enjoyed it.<br>
