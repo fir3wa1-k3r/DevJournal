@@ -104,12 +104,22 @@ Now when we carefully analyse the output, we can see some sequence of number i.e
 > If you don't know what Port Knocking is, you can check [here](https://en.wikipedia.org/wiki/Port_knocking) and [here](http://www.portknocking.org/) also
 <br>
 
-To perform a port knocking i wrote a simple shell script which connects to the server in the specified sequence and then opens the **secret port**<br>
+To perform a port knocking i wrote a simple shell script which connects to the server in the specified sequence and then opens the **secret port**. This can also be done using knockd program in linux. <br>
 
 <p align="center">
   <img width="674" height="57" src="https://fir3wa1-k3r.github.io/imgs/olympus_11.png">
 </p>
 <br>
+And as we saw in the DNS zone transfer output, the user `prometheus` was specified. And when we run the port knocking shell script the port 22 opens for a few second and then closes back again. When the port 22 opened initially i tried with the username as Hades and password as the string mentioned in the ouput of zone transfer but that was a fail attempt(as ssh username is always in small letters). Later when i tried loging in as prometheus with the same password that allowed me inside.
+<br>
+<p align="center">
+  <img width="688" height="570" src="https://fir3wa1-k3r.github.io/imgs/olympus_12.png">
+</p>
+
+
+
+
+
 
 
 
