@@ -128,8 +128,13 @@ Now i started enumerating to escalate my privileges. I ran the `LinEnum.sh` scri
   <img width="409" height="41" src="https://fir3wa1-k3r.github.io/imgs/olympus_14.png">
 </p>
 <br>
-If the current user is a member of docker group then its a way more easy to get root in the machine. As we use `groups` command we can see that user prometheus is a member of docker group. We can also see what container images are running in the system currently,
-
+If the current user is a member of docker group then its a way more easy to get root in the machine. As we use `groups` command we can see that user prometheus is a member of docker group. We can also see what container images are running in the system currently. This can be done using the command:<br>
+`docker images` or `docker container ls`
+<br>
+<p align="center">
+  <img width="409" height="41" src="https://fir3wa1-k3r.github.io/imgs/olympus_15.png">
+</p>
+<br>
 
 
 
