@@ -115,6 +115,13 @@ And as we saw in the DNS zone transfer output, the user `prometheus` was specifi
 <p align="center">
   <img width="688" height="570" src="https://fir3wa1-k3r.github.io/imgs/olympus_12.png">
 </p>
+<br>
+Got the user flag in the home directory!!<br>
+
+<p align="center">
+  <img width="374" height="43" src="https://fir3wa1-k3r.github.io/imgs/olympus_13.png">
+</p>
+
 
 
 
