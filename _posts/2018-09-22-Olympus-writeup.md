@@ -88,3 +88,11 @@ This text file mentioned something about the domain `ctfolympus.htb`. So i went 
 127.0.0.1		localhost		
 10.10.10.83		ctfolympus.htb		#This one
 {% endhighlight %}
+
+
+
+
+
+
+
+
