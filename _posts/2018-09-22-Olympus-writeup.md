@@ -104,7 +104,11 @@ Now when we carefully analyse the output, we can see some sequence of number i.e
 > If you don't know what Port Knocking is, you can check [here](https://en.wikipedia.org/wiki/Port_knocking) and [here](http://www.portknocking.org/) also
 <br>
 
+To perform a port knocking i wrote a simple shell script which connects to the server in the specified sequence and then opens the **secret port**<br>
 
+<p align="center">
+  <img width="674" height="57" src="https://fir3wa1-k3r.github.io/imgs/olympus_11.png">
+</p>
 
 
 
