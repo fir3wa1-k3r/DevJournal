@@ -122,6 +122,8 @@ Got the user flag in the home directory!!<br>
   <img width="374" height="43" src="https://fir3wa1-k3r.github.io/imgs/olympus_13.png">
 </p>
 
+Now i started enumerating to escalate my privileges. I ran the `LinEnum.sh` script and went through the result. There were many network interfaces and actually there was a docker program installed on this machine. Each user i.e zues, prometheus were being run in the docker, hence they were virtually isolated from the original system.
+If the current user is a member of docker group then its a way more easy to get root in the machine. As we use `groups` command we can see that user prometheus is a member of docker group.
 
 
 
