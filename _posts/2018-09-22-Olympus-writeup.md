@@ -98,6 +98,12 @@ Hence i performed a DNS zone transfer using this command:<br>
 <p align="center">
   <img width="1100" height="411" src="https://fir3wa1-k3r.github.io/imgs/olympus_10.png">
 </p>
+<br>
+Now when we carefully analyse the output, we can see some sequence of number i.e `Hades (3456 8234 62431)` and some string `St34l_th3_F1re!`. The string somewhat looks like a password and the sequence looks like ports numbers. And i guessed it that it could be through a port knocking method i can open the filtered ssh port which is 22.
+
+> If you don't know what Port Knocking is, you can check [here](https://en.wikipedia.org/wiki/Port_knocking) and [here](http://www.portknocking.org/) also
+<br>
+
 
 
 
