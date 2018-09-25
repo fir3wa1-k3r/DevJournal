@@ -88,8 +88,16 @@ This text file mentioned something about the domain `ctfolympus.htb`. So i went 
 127.0.0.1		localhost		
 10.10.10.83		ctfolympus.htb		#This one
 {% endhighlight %}
+<br>
+As we saw that DNS service was using TCP for its transmission, we probably can perform a **DNS Zone Transfer**.
+Hence i performed a DNS zone transfer using this command:<br>
+`$dig axfr @10.10.10.83 ctfolympus.htb`
+<br>
+`dig` is an awesome tool which can perform some DNS related stuff like query the DNS servers for records and even for network troubleshooting.
 
-
+<p align="center">
+  <img width="1000" height="411" src="https://fir3wa1-k3r.github.io/imgs/olympus_10.png">
+</p>
 
 
 
