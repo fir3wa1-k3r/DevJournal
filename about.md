@@ -4,4 +4,4 @@ title: About
 permalink: /about/
 published: true
 ---
-# Student and a security enthusiast
+# Just a security enthusiast
