@@ -81,12 +81,13 @@ server {
 }
 {% endhighlight %}
 <br>
-&nbsp;&nbsp;&nbsp;&nbsp;This server actually listens on port 8421 and accepts the requests with the PUT method &nbsp;&nbsp;&nbsp;&nbsp;and places the file in the `/dev/shm/` directory.You customize the port and the root &nbsp;&nbsp;&nbsp;&nbsp;directory by replacing the port and the directory path in the above code.
+This server actually listens on port 8421 and accepts the requests with the PUT method and places the file in the `/dev/shm/` directory.You customize the port and the root directory by replacing the port and the directory 	path in the above code.
+<br>
 &nbsp;&nbsp;&nbsp;&nbsp;Then we need to create a symbolic link of the created file to the `/etc/nginx/site-enabled` directory.
 
 `ln -s /etc/nginx/sites-available/transfer_files /etc/nginx/sites-enabled`
 <br>
-	Then restart the service by using the command `sudo service nginx restart`. You can use curl command to upload the file from the remote machine to the nginx server. You can use `curl --upload-file /path/to/file <ip>:<port>` to upload the file.
+Then restart the service by using the command `sudo service nginx restart`. You can use curl command to upload the file from the remote machine to the nginx server. You can use `curl --upload-file /path/to/file <ip>:<port>` to upload the file.
 <p align="center">
 	<img width="800" height="100" src="https://fir3wa1-k3r.github.io/imgs/file_7.png">
 </p>
@@ -113,7 +114,7 @@ server {
 	<img width="1200" height="58" src="https://fir3wa1-k3r.github.io/imgs/file_8.png">
 </p> 
 <br>
-&nbsp;&nbsp;&nbsp;&nbsp;The reverse is also possible, i.e it is possible to receive the files from the remote machine using scp.The 	command to retrieve files from the remote machine is given by,
+The reverse is also possible, i.e it is possible to receive the files from the remote machine using scp.The command to retrieve files from the remote machine is given by,
 	`scp <RemoteUsername>@<hostname/ip>:/remote/source/file /destination/local/path`
 <br>
 <br>
