@@ -12,7 +12,8 @@ For this post i will use a simple text file which is called as **text.file**
 <br>
 	You can use the Python's SimpleHTTPServer module for this particular technique. First you need to fire up the
     python's HTTP server using the command `$python -m SimpleHTTPServer`. The `-m` is a switch to specify the
-    module python and there you can run this command directly on your shell.
+    module python and there you can run this command directly on your shell. And this server serves the files in
+    the current directory where it is running.
     <br>
     <p align="center">
   		<img width="614" height="39" src="https://fir3wa1-k3r.github.io/imgs/file_1.png">	
@@ -37,5 +38,14 @@ For this post i will use a simple text file which is called as **text.file**
 	For this technique, you need to install the python package `pyftpdlib` if not installed.
     > Check [here](https://packaging.python.org/tutorials/installing-packages/) on how to install packages in 
     python
+	<br>
+    Then use the command `$python -m pyftpdlib` to start the ftp server. By default the server runs on port 2121
+    and this can even be customized using the `-p` switch.
+    <br>
+    <p align="center">
+  		<img width="800" height="136" src="https://fir3wa1-k3r.github.io/imgs/file_4.png">
+	</p>
+    <br>
+   	The default credentials for the
     
-    
+  
