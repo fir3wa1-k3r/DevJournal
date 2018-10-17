@@ -81,12 +81,12 @@ server {
 }
 {% endhighlight %}
 <br>
-This server actually listens on port 8421 and accepts the requests with the PUT method and places the file in the `/dev/shm/` directory.You customize the port and the root directory by replacing the port and the directory path in the above code.
-Then we need to create a symbolic link of the created file to the `/etc/nginx/site-enabled` directory.
+	This server actually listens on port 8421 and accepts the requests with the PUT method and places the file in the `/dev/shm/` directory.You customize the port and the root directory by replacing the port and the directory path in the above code.
+	Then we need to create a symbolic link of the created file to the `/etc/nginx/site-enabled` directory.
 
 `ln -s /etc/nginx/sites-available/transfer_files /etc/nginx/sites-enabled`
-
-Then restart the service by using the command `sudo service nginx restart`. You can use curl command to upload the file from the remote machine to the nginx server. You can use `curl --upload-file /path/to/file <ip>:<port>` to upload the file.
+<br>
+	Then restart the service by using the command `sudo service nginx restart`. You can use curl command to upload the file from the remote machine to the nginx server. You can use `curl --upload-file /path/to/file <ip>:<port>` to upload the file.
 <p align="center">
 	<img width="800" height="100" src="https://fir3wa1-k3r.github.io/imgs/file_7.png">
 </p>
@@ -111,7 +111,9 @@ Then restart the service by using the command `sudo service nginx restart`. You 
 	`scp test.file <RemoteUsername>@<hostname/ip>:/remote/destination/directory`
   
 </center>
-    
+<p align="center">
+	<img width="800" height="100" src="https://fir3wa1-k3r.github.io/imgs/file_7.png">
+</p>    
  
     
     
