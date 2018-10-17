@@ -116,7 +116,15 @@ The reverse is also possible, i.e it is possible to receive the files from the r
 	`scp <RemoteUsername>@<hostname/ip>:/remote/source/file /destination/local/path`
 <br>
 <br>
- 
+
+* **Base64 command**
+<br>
+<br>
+	This command is very helpful to decode and encode the characters in base64. This command can also be used when we are running a VM locally or, when we are connected to the VPN to transfer files. This command can be used to convert the contents of the file to the base64 and then on the local machine decode it. This is done because, it prevents loss or damage of characters while copying directly.
+<p align="center">
+	<img width="633" height="400" src="https://fir3wa1-k3r.github.io/imgs/file_9.png">
+</p>
+
     
     
     
