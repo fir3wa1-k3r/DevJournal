@@ -110,7 +110,7 @@ server {
 <center>
 	`scp test.file <RemoteUsername>@<hostname/ip>:/remote/destination/directory`
 <p align="center">
-	<img width="900" height="58" src="https://fir3wa1-k3r.github.io/imgs/file_8.png">
+	<img width="1200" height="58" src="https://fir3wa1-k3r.github.io/imgs/file_8.png">
 </p>    
  
     
