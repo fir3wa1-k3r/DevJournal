@@ -107,7 +107,6 @@ server {
 <br>
 	When we are on a ssh connection to the client, we can actually use the scp command to transfer the file to the remote machine securly over ssh tunnel. The scp command to send a file to the remote machine from your local machine is given by,
 <br>
-<center>
 	`scp test.file <RemoteUsername>@<hostname/ip>:/remote/destination/directory`
 <p align="center">
 	<img width="1200" height="58" src="https://fir3wa1-k3r.github.io/imgs/file_8.png">
