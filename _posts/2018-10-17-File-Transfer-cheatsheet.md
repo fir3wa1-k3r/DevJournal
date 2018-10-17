@@ -58,7 +58,7 @@ For this post i will use a simple text file which is called as **text.file**
 * **Twistd FTP Server**
 <br>
 <br>
-	You need to install twistd program to use this technique. You can do this by running `sudo apt-get install twistd` command on your terminal or any equivalent package manager.
+	You need to install twistd program to use this technique. You can do this by running `sudo apt-get install twistd` command on your terminal or with any equivalent package manager.
     You can start the twistd FTP server by running `twistd ftp` command on the terminal. The service starts and runs in the background. By default the twistd service runs on port 2121, we can customize the port. This also allows anonymous login and hence the credentials can also be changed if needed. The twistd FTP service uses `/usr/local/ftp` as the default root directory for the file server. You can modify it by using the switch `-r` or `--root=` and provide the path.
 	<p align="center">
 		<img width="566" height="172" src="https://fir3wa1-k3r.github.io/imgs/file_6.png">
