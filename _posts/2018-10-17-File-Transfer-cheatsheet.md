@@ -7,7 +7,7 @@ published: true
 For this post i will use a simple text file which is called as **text.file**
 <br>
 <br>
-* **Python Http Server**
+### Python Http Server
 <br>
 <br>
 	You can use the Python's SimpleHTTPServer module for this particular technique. First you need to fire up the
@@ -33,7 +33,7 @@ For this post i will use a simple text file which is called as **text.file**
     <br>
     <br>
     
-* **Python FTP Server**
+### Python FTP Server
 <br>
 <br>
 	For this technique, you need to install the python package `pyftpdlib` if not installed.
@@ -55,7 +55,7 @@ For this post i will use a simple text file which is called as **text.file**
 <br>
 <br>
 
-* **Twistd FTP Server**
+### Twistd FTP Server
 <br>
 <br>
 	You need to install twistd program to use this technique. You can do this by running `sudo apt-get install twistd` command on your terminal or with any equivalent package manager.
