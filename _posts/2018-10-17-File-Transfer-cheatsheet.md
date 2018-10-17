@@ -134,7 +134,10 @@ Here the file is encoded into base64 and then the encoded text is copied into th
 <p align="center">
 	<img width="509" height="458" src="https://fir3wa1-k3r.github.io/imgs/file_11.png">
 </p>    
-    
+
+
+
+Still much more techniques are yet to come..!!
     
     
     
