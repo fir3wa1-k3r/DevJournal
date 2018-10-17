@@ -91,7 +91,7 @@ server {
 	<img width="800" height="100" src="https://fir3wa1-k3r.github.io/imgs/file_7.png">
 </p>
 
-<br>Then the file *test* will be transfered to the /dev/shm of the remote machine which is running nginx server.
+<br>	Then the file *test* will be transfered to the /dev/shm of the remote machine which is running nginx server.
 <br>
 <br>
 
@@ -112,7 +112,7 @@ server {
 	<img width="1200" height="58" src="https://fir3wa1-k3r.github.io/imgs/file_8.png">
 </p> 
 <br>
-The reverse is also possible, i.e it is possible to receive the files from the remote machine using scp.The command to retrieve files from the remote machine is given by,
+	The reverse is also possible, i.e it is possible to receive the files from the remote machine using scp.The 	command to retrieve files from the remote machine is given by,
 	`scp <RemoteUsername>@<hostname/ip>:/remote/source/file /destination/local/path`
 <br>
 <br>
