@@ -9,6 +9,7 @@ For this post i will use a simple text file which is called as **text.file**
 <br>
 * **Python Http Server**
 <br>
+<br>
 	You can use the Python's SimpleHTTPServer module for this particular technique. First you need to fire up the
     python's HTTP server using the command `$python -m SimpleHTTPServer`. The `-m` is a switch to specify the
     module python and there you can run this command directly on your shell.
@@ -22,5 +23,6 @@ For this post i will use a simple text file which is called as **text.file**
     <br>
     `$python -m SimpleHTTPServer 80` 
     <br>
+    
     
     
