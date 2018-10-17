@@ -1,7 +1,7 @@
 ---
 published: true
 ---
-### There are a lot many ways to tranfer a file from one machine to a remote or a local machine in a Linux terminal. Here are a few of them which may help you when you are stuck. Before starting i would like to thank **ippsec** for all these tricks. Thank you man, Kudos to you!!!
+### There are a lot many ways to transfer a file from one machine to a remote or a local machine in a Linux terminal. Here are a few of them which may help you when you are stuck. Before starting i would like to thank **ippsec** for all these tricks. Thank you man, Kudos to you!!!
 <br>
 <br>
 For this post i will use a simple text file which is called as **text.file**
@@ -142,13 +142,3 @@ The reverse is also possible, i.e it is possible to receive the files from the r
 
 
 Still much more techniques are yet to come..!!
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
