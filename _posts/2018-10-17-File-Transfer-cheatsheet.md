@@ -15,9 +15,9 @@ For this post i will use a simple text file which is called as **text.file**
     module python and there you can run this command directly on your shell. And this server serves the files in
     the current directory where it is running.
     <br>
-    <p align="center">
-  		<img width="614" height="39" src="https://fir3wa1-k3r.github.io/imgs/file_1.png">	
-	</p>
+<p align="center">
+  <img width="614" height="39" src="https://fir3wa1-k3r.github.io/imgs/file_1.png">	
+</p>
 	<br>
     This command is executed on the machine from which you want to transfer files to your machine.
 	By default this server will run port 8000 you can even specify the custom port by just appending the
@@ -26,9 +26,9 @@ For this post i will use a simple text file which is called as **text.file**
     `$python -m SimpleHTTPServer 80` 
     <br>
     And on the remote machine use the `wget` command to download the file from the server.
-    <p align="center">
-  		<img width="1286" height="198" src="https://fir3wa1-k3r.github.io/imgs/file_2.png">
-	</p>
+ <p align="center">
+  	<img width="1286" height="198" src="https://fir3wa1-k3r.github.io/imgs/file_2.png">
+</p>
     <br>
     <br>
     
@@ -42,10 +42,13 @@ For this post i will use a simple text file which is called as **text.file**
     Then use the command `$python -m pyftpdlib` to start the ftp server. By default the server runs on port 2121
     and this can even be customized using the `-p` switch.
     <br>
-    <p align="center">
-  		<img width="800" height="136" src="https://fir3wa1-k3r.github.io/imgs/file_4.png">
-	</p>
+<p align="center">
+	<img width="800" height="136" src="https://fir3wa1-k3r.github.io/imgs/file_4.png">
+</p>
     <br>
-   	The default credentials for the
+   	This server provides anonymous login facility, and can also include custom username and password.
+<p align="center">
+	<img width="686" height="249" src="https://fir3wa1-k3r.github.io/imgs/file_5.png">
+</p>
     
   
