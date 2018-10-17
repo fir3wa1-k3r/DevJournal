@@ -90,3 +90,27 @@ Then restart the service by using the command `sudo service nginx restart`. You 
 <p align="center">
 	<img width="800" height="100" src="https://fir3wa1-k3r.github.io/imgs/file_7.png">
 </p>
+
+<br>Then the file *test* will be transfered to the /dev/shm of the remote machine which is running nginx server.
+<br>
+<br>
+
+* **Apache Server**
+	This technique is similar to the above technique, but here we use the Apache Server. The apache server will run to server files here. The default directory which the apache uses it `/var/www/html/`. We can put any files into this directory if we are root user. Then start/restart the Apache service using the command `sudo service apache2 start`. Now, the remote machine can use any tool like, curl or wget to download the file.
+<br>
+<br>
+
+* **SCP command**
+	When we are
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
