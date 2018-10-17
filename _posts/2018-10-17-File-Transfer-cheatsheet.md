@@ -25,8 +25,14 @@ For this post i will use a simple text file which is called as **text.file**
     <br>
     And on the remote machine use the `wget` command to download the file from the server.
     <p align="center">
-  		<img width="1286" height="198" src="https://fir3wa1-k3r.github.io/imgs/file_2.png">	
+  		<img width="1286" height="198" src="https://fir3wa1-k3r.github.io/imgs/file_2.png">
 	</p>
     
+    
+* **Python FTP Server**
+<br>
+<br>
+	For this technique, you need to install the python package `pyftpdlib` if not installed.
+    > Check [here](https://packaging.python.org/tutorials/installing-packages/) on how to install packages in python
     
     
