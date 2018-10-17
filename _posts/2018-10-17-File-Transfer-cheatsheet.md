@@ -96,6 +96,8 @@ Then restart the service by using the command `sudo service nginx restart`. You 
 <br>
 
 * **Apache Server**
+<br>
+<br>
 	This technique is similar to the above technique, but here we use the Apache Server. The apache server will run to server files here. The default directory which the apache uses it `/var/www/html/`. We can put any files into this directory if we are root user. Then start/restart the Apache service using the command `sudo service apache2 start`. Now, the remote machine can use any tool like, curl or wget to download the file.
 <br>
 <br>
