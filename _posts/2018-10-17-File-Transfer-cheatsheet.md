@@ -11,7 +11,7 @@ For this post i will use a simple text file which is called as **text.file**
 <br>
 <br>
 	You can use the Python's SimpleHTTPServer module for this particular technique. First you need to fire up the
-    python's HTTP server using the command `$python -m SimpleHTTPServer`. The `-m` is a switch to specify the
+    python's HTTP server using the command `python -m SimpleHTTPServer`. The `-m` is a switch to specify the
     module python and there you can run this command directly on your shell. And this server serves the files in
     the current directory where it is running.
     <br>
@@ -23,7 +23,7 @@ For this post i will use a simple text file which is called as **text.file**
 	By default this server will run port 8000 you can even specify the custom port by just appending the
     port at the end. In the below example, the server serves on port 80.
     <br>
-    `$python -m SimpleHTTPServer 80`
+    `python -m SimpleHTTPServer 80`
     <br>
     And on the remote machine use the `wget` command to download the file from the server.
     <br>
@@ -41,7 +41,7 @@ For this post i will use a simple text file which is called as **text.file**
     
     > To know more about installing packages click [here](https://packaging.python.org/tutorials/installing-packages/). 
     
-    Then use the command `$python -m pyftpdlib` to start the ftp server. By default the server runs on port 2121
+    Then use the command `python -m pyftpdlib` to start the ftp server. By default the server runs on port 2121
     and this can even be customized using the `-p` switch.
     <br>
 	<p align="center">
@@ -59,7 +59,7 @@ For this post i will use a simple text file which is called as **text.file**
 <br>
 <br>
 	You need to install twistd program to use this technique. You can do this by running `sudo apt-get install twistd` command on your terminal or any equivalent package manager.
-    You can start the twistd FTP server by running `$twistd ftp` command on the terminal. The service starts and runs in the background. By default the twistd service runs on port 2121, we can customize the port. This also allows anonymous login and hence the credentials can also be changed if needed. The twistd FTP service uses `/usr/local/ftp` as the default root directory for the file server. You can modify it by using the switch `-r` or `--root=` and provide the path.
+    You can start the twistd FTP server by running `twistd ftp` command on the terminal. The service starts and runs in the background. By default the twistd service runs on port 2121, we can customize the port. This also allows anonymous login and hence the credentials can also be changed if needed. The twistd FTP service uses `/usr/local/ftp` as the default root directory for the file server. You can modify it by using the switch `-r` or `--root=` and provide the path.
 	<p align="center">
 		<img width="566" height="172" src="https://fir3wa1-k3r.github.io/imgs/file_6.png">
 	</p>    
