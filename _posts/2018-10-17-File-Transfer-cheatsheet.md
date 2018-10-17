@@ -103,6 +103,8 @@ Then restart the service by using the command `sudo service nginx restart`. You 
 <br>
 
 * **SCP command**
+<br>
+<br>
 	When we are on a ssh connection to the client, we can actually use the scp command to transfer the file to the remote machine securly over ssh tunnel. The scp command to send a file to the remote machine from your local machine is given by,
 <br>
 <center>
