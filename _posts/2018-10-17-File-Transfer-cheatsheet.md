@@ -86,4 +86,7 @@ Then we need to create a symbolic link of the created file to the `/etc/nginx/si
 
 `ln -s /etc/nginx/sites-available/transfer_files /etc/nginx/sites-enabled`
 
-Then restart the service by using the command `sudo service nginx restart`. You can use curl command to upload the file from the remote machine to the nginx server
+Then restart the service by using the command `sudo service nginx restart`. You can use curl command to upload the file from the remote machine to the nginx server. You can use `curl --upload-file /path/to/file <ip>:<port>` to upload the file.
+	<p align="center">
+		<img width="800" height="100" src="https://fir3wa1-k3r.github.io/imgs/file_7.png">
+	</p>
