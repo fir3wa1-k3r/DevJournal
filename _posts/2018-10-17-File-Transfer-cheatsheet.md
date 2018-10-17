@@ -23,12 +23,13 @@ For this post i will use a simple text file which is called as **text.file**
 	By default this server will run port 8000 you can even specify the custom port by just appending the
     port at the end. In the below example, the server serves on port 80.
     <br>
-    `$python -m SimpleHTTPServer 80` 
+    `$python -m SimpleHTTPServer 80`
     <br>
     And on the remote machine use the `wget` command to download the file from the server.
- 	<p align="center">
+    <br>
+    <p align="center">
   		<img width="886" height="198" src="https://fir3wa1-k3r.github.io/imgs/file_2.png">
-	</p>
+  	</p>
     <br>
     <br>
     
