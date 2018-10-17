@@ -81,8 +81,8 @@ server {
 }
 {% endhighlight %}
 <br>
-&nbsp;&nbsp;&nbsp;&nbsp;This server actually listens on port 8421 and accepts the requests with the PUT method and places the file in the `/dev/shm/` directory.You customize the port and the root directory by replacing the port and the directory path in the above code.
-	Then we need to create a symbolic link of the created file to the `/etc/nginx/site-enabled` directory.
+&nbsp;&nbsp;&nbsp;&nbsp;This server actually listens on port 8421 and accepts the requests with the PUT method &nbsp;&nbsp;&nbsp;&nbsp;and places the file in the `/dev/shm/` directory.You customize the port and the root &nbsp;&nbsp;&nbsp;&nbsp;directory by replacing the port and the directory path in the above code.
+&nbsp;&nbsp;&nbsp;&nbsp;Then we need to create a symbolic link of the created file to the `/etc/nginx/site-enabled` directory.
 
 `ln -s /etc/nginx/sites-available/transfer_files /etc/nginx/sites-enabled`
 <br>
