@@ -125,7 +125,7 @@ server {
 	<img width="633" height="400" src="https://fir3wa1-k3r.github.io/imgs/file_9.png">
 </p>
 <br>
-Here the file is encoded into base64 and then the encoded text is copied into the local machine.
+	Here the file is encoded into base64 and then the encoded text is copied into the local machine.
 <br>
 <p align="center">
 	<img width="765" height="342" src="https://fir3wa1-k3r.github.io/imgs/file_10.png">
