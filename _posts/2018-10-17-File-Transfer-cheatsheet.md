@@ -70,6 +70,7 @@ For this post i will use a simple text file which is called as **text.file**
 <br>
 <br>
 	You need to have an nginx server on the machine where you want to accept the files. Then you just need to configure a bit to work appropriately. For the Ubuntu system, the configuration files will be under the `/etc/nginx/` directory. We actually need to create a new file here its called **transfer_files** under `/etc/nginx/sites-available/` and add the below code in it.
+<br>
 {% highlight ruby %} 
 server {
 		listen 8421 default_server;
@@ -79,3 +80,8 @@ server {
        	}
 }
 {% endhighlight %}
+<br>
+You customize the port and the root directory by replacing the port and the directory path in the above code.
+Then we need to create a symbolic link of the created file to the `/etc/nginx/site-enabled` directory.
+
+`ln -s /etc/nginx/sites-available/transfer_files /etc/nginx/sites-enabled`
