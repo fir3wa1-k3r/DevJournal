@@ -5,7 +5,7 @@ published: true
 <br>
 **Lets get started**
 <br>
-1. **Python Http Server
+* **Python Http Server**
 
 
 
