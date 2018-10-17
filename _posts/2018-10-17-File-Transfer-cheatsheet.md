@@ -6,6 +6,7 @@ published: true
 <br>
 <br>
 For this post i will use a simple text file which is called as **text.file**
+<br>
 * **Python Http Server**
 <br>
 	You can use the Python's SimpleHTTPServer module for this particular technique. First you need to fire up the
