@@ -109,8 +109,6 @@ server {
 <br>
 <center>
 	`scp test.file <RemoteUsername>@<hostname/ip>:/remote/destination/directory`
-  
-</center>
 <p align="center">
 	<img width="900" height="58" src="https://fir3wa1-k3r.github.io/imgs/file_8.png">
 </p>    
