@@ -81,7 +81,9 @@ server {
 }
 {% endhighlight %}
 <br>
-You customize the port and the root directory by replacing the port and the directory path in the above code.
+This server actually listens on port 8421 and accepts the requests with the PUT method and places the file in the `/dev/shm/` directory.You customize the port and the root directory by replacing the port and the directory path in the above code.
 Then we need to create a symbolic link of the created file to the `/etc/nginx/site-enabled` directory.
 
 `ln -s /etc/nginx/sites-available/transfer_files /etc/nginx/sites-enabled`
+
+Then restart the service by using the command `sudo service nginx restart`. You can use curl command to upload the file from the remote machine to the nginx server
