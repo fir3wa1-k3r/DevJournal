@@ -130,10 +130,12 @@ Here the file is encoded into base64 and then the encoded text is copied into th
 <p align="center">
 	<img width="765" height="342" src="https://fir3wa1-k3r.github.io/imgs/file_10.png">
 </p>
+<br>
 	In the local machine, the encoded text is put into a file, and then decoded using the command `base64 -d`. This technique supports any kind of files.
 <p align="center">
 	<img width="509" height="458" src="https://fir3wa1-k3r.github.io/imgs/file_11.png">
-</p>    
+</p>
+<br>
 
 
 
