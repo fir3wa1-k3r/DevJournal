@@ -43,12 +43,12 @@ For this post i will use a simple text file which is called as **text.file**
     and this can even be customized using the `-p` switch.
     <br>
 <p align="center">
-	<img width="800" height="136" src="https://fir3wa1-k3r.github.io/imgs/file_4.png">
+	<img width="800" height="136" src="https://fir3wa1-k3r.github.io/imgs/file_4.png"/>
 </p>
     <br>
    	This server provides anonymous login facility, and can also include custom username and password.
 <p align="center">
-	<img width="686" height="249" src="https://fir3wa1-k3r.github.io/imgs/file_5.png">
+	<img width="686" height="249" src="https://fir3wa1-k3r.github.io/imgs/file_5.png"/>
 </p>
     
   
