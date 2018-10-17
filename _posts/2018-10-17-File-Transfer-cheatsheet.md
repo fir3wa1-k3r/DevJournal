@@ -5,7 +5,9 @@ published: true
 **Lets get started**
 <br>
 <br>
+For this post i will use a simple text file which is called as **text.file**
 * **Python Http Server**
-
+	
+	
 
 
