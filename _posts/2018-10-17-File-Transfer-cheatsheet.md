@@ -76,7 +76,7 @@ server {
 		listen 8421 default_server;
         location / {
         		root /dev/shm;
-                dav_methods PUT;
+                	dav_methods PUT;
        	}
 }
 {% endhighlight %}
