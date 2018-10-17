@@ -9,7 +9,10 @@ For this post i will use a simple text file which is called as **text.file**
 * **Python Http Server**
 	You can use the Python's SimpleHTTPServer module for this particular technique. First you need to fire up the
     python's HTTP server using the command `$python -m SimpleHTTPServer`. The `-m` is a switch to specify the
-    module python and there you can run this command directly on your shell. 
+    module python and there you can run this command directly on your shell.
+    <p align="center">
+  		<img width="614" height="39" src="https://fir3wa1-k3r.github.io/imgs/file_1.png">	
+	</p>
 	
 
 
