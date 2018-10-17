@@ -112,7 +112,7 @@ server {
   
 </center>
 <p align="center">
-	<img width="800" height="100" src="https://fir3wa1-k3r.github.io/imgs/file_7.png">
+	<img width="900" height="58" src="https://fir3wa1-k3r.github.io/imgs/file_8.png">
 </p>    
  
     
