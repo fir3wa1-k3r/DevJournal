@@ -14,6 +14,12 @@ For this post i will use a simple text file which is called as **text.file**
     <p align="center">
   		<img width="614" height="39" src="https://fir3wa1-k3r.github.io/imgs/file_1.png">	
 	</p>
-	
-
-
+	<br>
+    This command is executed on the machine from which you want to transfer files to your machine.
+	By default this server will run port 8000 you can even specify the custom port by just appending the
+    port at the end. In the below example, the server serves on port 80.
+    <br>
+    `$python -m SimpleHTTPServer 80` 
+    <br>
+    
+    
