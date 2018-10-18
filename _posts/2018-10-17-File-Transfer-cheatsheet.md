@@ -23,6 +23,8 @@ For this post i will use a simple text file which is called as **text.file**
 	By default this server will run port 8000 you can even specify the custom port by just appending the
     port at the end. In the below example, the server serves on port 80.
     <br>
+   	> If Python 3 is installed then, the twin of SimpleHTTPServer module of Python2 is the http.server. The syntax is just similar to the other one, `python3 -m http.server <port>` as default port is 8000.
+    <br>
     `python -m SimpleHTTPServer 80`
     <br>
     And on the remote machine use the `wget` command to download the file from the server.
