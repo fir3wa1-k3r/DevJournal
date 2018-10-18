@@ -29,7 +29,7 @@ For this post i will use a simple text file which is called as **text.file**
     <br>
     <br>
     
-    > If Python 3 is installed then, the twin of SimpleHTTPServer module of Python2 is the http.server. The syntax is just similar to the other one, `python3 -m http.server <port>` as default port is 8000.
+    > If Python3 is installed then, the twin of SimpleHTTPServer module of Python2 is the http.server. The syntax is just similar to the other one, `python3 -m http.server <port>` as default port is 8000.
     <br>
     <p align="center">
   		<img width="886" height="198" src="https://fir3wa1-k3r.github.io/imgs/file_2.png">
