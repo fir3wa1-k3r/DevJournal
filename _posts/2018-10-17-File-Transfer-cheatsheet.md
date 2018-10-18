@@ -145,6 +145,19 @@ The reverse is also possible, i.e it is possible to receive the files from the r
 <br>
 
 * **Netcat or Ncat**
-
+<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Netcat or Ncat is the swiss army tool for performing the sysadmin work. We can use it transfer files too. On the sender side, we need to listen on a particular port to serve files, `cat filename | ncat -lvnp <port>`.
+<br>
+<p align="center">
+	<img width="993" height="155" src="https://fir3wa1-k3r.github.io/imgs/file_12.png">
+</p>
+<br>
+On the receiver side, this command `bash -c "cat < /dev/tcp/ip/port > /tmp/filename"` is used to recieve the contents of the file and then write it to the file in the /tmp directory. Here the `ip` and `port` has to be replaced with the ip and port of the server.
+<br>
+<p align="center">
+	<img width="775" height="24" src="https://fir3wa1-k3r.github.io/imgs/file_13.png">
+</p>
+<br>
 
 Still much more techniques are yet to come..!!
