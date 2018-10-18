@@ -28,7 +28,9 @@ For this post i will use a simple text file which is called as **text.file**
     And on the remote machine use the `wget` command to download the file from the server.
     <br>
     <br>
-   	> If Python 3 is installed then, the twin of SimpleHTTPServer module of Python2 is the http.server. The syntax is just similar to the other one, `python3 -m http.server <port>` as default port is 8000.
+    
+    > If Python 3 is installed then, the twin of SimpleHTTPServer module of Python2 is the http.server. The syntax is just similar to the other one, `python3 -m http.server <port>` as default port is 8000.
+    <br>
     <p align="center">
   		<img width="886" height="198" src="https://fir3wa1-k3r.github.io/imgs/file_2.png">
   	</p>
@@ -140,7 +142,9 @@ The reverse is also possible, i.e it is possible to receive the files from the r
 	<img width="509" height="458" src="https://fir3wa1-k3r.github.io/imgs/file_11.png">
 </p>
 <br>
+<br>
 
+* **Netcat or Ncat**
 
 
 Still much more techniques are yet to come..!!
