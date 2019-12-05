@@ -22,4 +22,6 @@ github_username:  fir3wa1-k3r
 # Build settings
 markdown: kramdown
 
+analytics_id: "153977318-1"
+
 theme: jekyll-theme-cayman
