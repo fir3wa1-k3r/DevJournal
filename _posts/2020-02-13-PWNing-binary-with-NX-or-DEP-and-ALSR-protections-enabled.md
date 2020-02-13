@@ -98,7 +98,7 @@ If we execute the binary, we hit our first breakpoint. Now, lets check the conte
 Let continue executing and now hit our second breakpoint. Now it is populated with the real address of the puts function after it gets executed.
 <br>
 <p align="center">
-  		<img width="614" height="39" src="https://fir3wa1-k3r.github.io/imgs/pwn_14.png">
+  		<img width="304" height="80" src="https://fir3wa1-k3r.github.io/imgs/pwn_14.png">
 </p>
 <br>
 Now, lets try to leak this address using the ROP gadgets. The gadgets in the ROP are simple the sequence of assembly level instruction which we can leverage to alter the flow of execution of the program. As we all know, in the 64-bit calling convension, the arguments for a function are first populated in the registers and then the function gets called. So, the sequence of registers that store the paramters are rdi, rsi, rdx, rcx etc. So the address of the first, second, third and fourth arguments of a functions will be populated into the rdi, rsi, rdx, rcx etc.
