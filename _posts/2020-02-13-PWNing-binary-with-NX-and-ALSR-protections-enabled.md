@@ -8,7 +8,7 @@ Hola people, today lets try to pwn a binary which has NX/DEP protection and the 
   		<img width="400" height="250" src="https://fir3wa1-k3r.github.io/imgs/pwn_1.png">
 </p>
 <br>
-When we run the file command on the compiled binary we see that its a 64 bit ELF and is not stipped which means that the debugging symbols are enabled. And the checksec command tells that only the Non executable stack protection (NX) is enabled which means that we can't just put shellcode on the stack and execute it. If we try to do it, we will end up in segmentation fault.
+When we run the file command on the compiled binary we see that its a 64 bit ELF and is not stipped which means that the debugging symbols are enabled. And the checksec command tells that only the Non executable stack protection (NX) is enabled which means that we can't just put shellcode on the stack and execute it. If we try to do it, we will end up in a segmentation fault.
 <br>
 <p align="center">
   	<img width="950" height="180" src="https://fir3wa1-k3r.github.io/imgs/pwn_2.png">	
