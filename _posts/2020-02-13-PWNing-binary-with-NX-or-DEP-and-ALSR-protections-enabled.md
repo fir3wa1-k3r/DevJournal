@@ -124,7 +124,7 @@ Now, let us the pwntools utility to craft a simple exploit to leak the real addr
 When we execute it we leak the real address of the puts function in libc. 
 <br>
 <p align="center">
-  	<img width="614" height="39" src="https://fir3wa1-k3r.github.io/imgs/pwn_18.png">
+  	<img width="614" height="250" src="https://fir3wa1-k3r.github.io/imgs/pwn_18.png">
 </p>
 <br>
 So, after that we tweak the exploit code to display the leaked address in a nice hex value.
