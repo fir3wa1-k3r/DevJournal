@@ -109,7 +109,7 @@ We can use the program called ROPgadget to find the required gadgets.
   	<img width="480" height="75" src="https://fir3wa1-k3r.github.io/imgs/pwn_15.png">
 </p>
 <br>
-We choose `pop rdi; ret` gadget so that, the first argument for the function will be popped into rdi and then the ret instruction will tell the CPU to jump to RSP which intern executes the function that is pointed by RSP. Lets get the PLT entry for the main function so that we can call it again to continue our exploitation. If we just call the main function once, it is waste to leak the address of puts as the libc will be loaded to new address everytime our vulnerable binary gets executed. 
+We choose `pop rdi; ret` gadget so that, the first argument for the function will be popped into RDI and then the ret instruction will tell the CPU to jump to RSP which intern executes the function that is pointed by RSP. Lets get the PLT entry for the main function so that we can call it again to continue our exploitation. If we just call the main function once, it is waste to leak the address of puts as the libc will be loaded to new address everytime our vulnerable binary gets executed. 
 <br>
 <p align="center">
   	<img width="614" height="39" src="https://fir3wa1-k3r.github.io/imgs/pwn_16.png">
