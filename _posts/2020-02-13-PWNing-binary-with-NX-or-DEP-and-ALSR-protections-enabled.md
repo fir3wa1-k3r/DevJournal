@@ -64,7 +64,7 @@ Lets get into some action now. We will identify the PLT address for the puts fun
 From the PLT address of the puts fuction we can try to find out the GOT entry for puts. 
 <br>
 <p align="center">
-  	<img width="614" height="39" src="https://fir3wa1-k3r.github.io/imgs/pwn_9.png">
+  	<img width="614" height="80" src="https://fir3wa1-k3r.github.io/imgs/pwn_9.png">
 </p>
 <br>
 So here the address of the GOT entry for puts is 0x601018. If we try to see what value is present it that location, we see that it is pointing back to the next instruction of the PLT. This is before the real address of puts function is calcuated. We can see later how the real address get populated in the GOT entry when we start executing the vulnerable binary.
@@ -76,7 +76,7 @@ So here the address of the GOT entry for puts is 0x601018. If we try to see what
 You can also see the PLT and GOT memory regions using the command "info files" in the gdb.
 <br>
 <p align="center">
-  	<img width="614" height="80" src="https://fir3wa1-k3r.github.io/imgs/pwn_10.png">
+  	<img width="350" height="40" src="https://fir3wa1-k3r.github.io/imgs/pwn_10.png">
 </p>
 <br>
 Now, lets see how the real address gets populated in the GOT. We set a break point before and after the calling the puts function.
