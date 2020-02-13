@@ -20,7 +20,7 @@ Let's run the binary and see what it does. It just ask for the user input and th
   	<img width="280" height="80" src="https://fir3wa1-k3r.github.io/imgs/pwn_3.png">	
 </p>
 <br>
-Now let's test whether we have a buffer overflow or not (even though we know it is).
+Now let's test whether we have a buffer overflow or not (even though we know it exists).
 <br>
 <p align="center">
   	<img width="550" height="80" src="https://fir3wa1-k3r.github.io/imgs/pwn_4.png">
