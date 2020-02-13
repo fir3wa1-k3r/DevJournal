@@ -151,6 +151,7 @@ libc_base_address = leaked_real_puts_address - offset_of_puts<br>
 real_system_address = libc_base_address + offset_of_system<br>
 real_/bin/sh_address = libc_base_address + offset_of_/bin/sh
 <br>
+<br>
 So, here is the overall exploit to pwn the binary and spawn a shell.
 <br>
 {% highlight ruby %} 
