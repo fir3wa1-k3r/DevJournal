@@ -95,7 +95,7 @@ If we execute the binary, we hit our first breakpoint. Now, lets check the conte
   	<img width="320" height="80" src="https://fir3wa1-k3r.github.io/imgs/pwn_13.png">
 </p>
 <br>
-Let continue executing and now hit our second breakpoint. Now it is populated with the real address of the puts function after it gets executed.
+Lets continue executing and then we hit our second breakpoint. Now it is populated with the real address of the puts function after it gets executed.
 <br>
 <p align="center">
   		<img width="320" height="80" src="https://fir3wa1-k3r.github.io/imgs/pwn_14.png">
