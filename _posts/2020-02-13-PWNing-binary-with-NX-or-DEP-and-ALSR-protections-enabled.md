@@ -37,7 +37,7 @@ So, we can find the offset until which we can fill out junk data and whatever is
 We create a cyclic pattern of 100 characters in length and input that to our vulnerable binary.
 <br>
 <p align="center">
-  	<img width="614" height="39" src="https://fir3wa1-k3r.github.io/imgs/pwn_6.png">
+  	<img width="614" height="250" src="https://fir3wa1-k3r.github.io/imgs/pwn_6.png">
 </p>
 <br>
 The offset is at 40. So, we can fill up junk until 40 character and after which the return address will be modified by data specified by the attacker. Now we have the control of the instruction pointer.
@@ -45,7 +45,7 @@ The offset is at 40. So, we can fill up junk until 40 character and after which 
 We also see that ALSR is enabled on the server which is why libc's base address gets changed everytime when we run the ldd command on the vulnerable binary.
 <br>
 <p align="center">
-  	<img width="614" height="39" src="https://fir3wa1-k3r.github.io/imgs/pwn_7.png">
+  	<img width="614" height="250" src="https://fir3wa1-k3r.github.io/imgs/pwn_7.png">
 </p>
 <br>
 So, we can try to leak the real address of one of the functions in libc library so that we can calculate the libc's base address and even call other libc function just by knowing their base address. Isn't that cool!!
@@ -58,7 +58,7 @@ For now, i will quickly explain what do they do. Before a function from the dyna
 Lets get into some action now. We will identify the PLT address for the puts function using the objdump utility. 
 <br>
 <p align="center">
-  	<img width="614" height="39" src="https://fir3wa1-k3r.github.io/imgs/pwn_8.png">
+  	<img width="400" height="100" src="https://fir3wa1-k3r.github.io/imgs/pwn_8.png">
 </p>
 <br>
 From the PLT address of the puts fuction we can try to find out the GOT entry for puts. 
