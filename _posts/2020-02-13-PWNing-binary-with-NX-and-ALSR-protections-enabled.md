@@ -147,9 +147,9 @@ We can calculate the real address where the libc is loaded from the leaked addre
 <br>
 Now, we calculate the base and real addresses using the below formula:
 
-libc base address = leaked real puts address - offset of puts
-real system address = libc base address + offset of system<br>
-real system address = libc base address + offset of "/bin/sh"
+libc_base_address = leaked_real_puts_address - offset_of_puts<br>
+real_system_address = libc_base_address + offset_of_system<br>
+real_/bin/sh_address = libc_base_address + offset_of_/bin/sh
 <br>
 So, here is the overall exploit to pwn the binary and spawn a shell.
 <br>
