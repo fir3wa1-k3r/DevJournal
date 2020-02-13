@@ -86,7 +86,7 @@ You can also see the PLT and GOT memory regions using the command "info files" i
 Now, lets see how the real address gets populated in the GOT. We set a break point before and after the calling the puts function.
 <br>
 <p align="center">
-  	<img width="614" height="400" src="https://fir3wa1-k3r.github.io/imgs/pwn_12.png">
+  	<img width="614" height="550" src="https://fir3wa1-k3r.github.io/imgs/pwn_12.png">
 </p>
 <br>
 If we execute the binary, we hit our first breakpoint. Now, lets check the contents of GOT entry for the puts function. We see still its pointing to the next instruction of PLT.
