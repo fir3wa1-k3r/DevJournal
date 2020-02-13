@@ -4,9 +4,7 @@ published: true
 
 Hola people, today lets try to pwn a binary which has NX/DEP protection and the machine has ALSR enabled. I have written a simple C program which utilizes the vulnerable function gets to read the user input. The user input is read into the variable 'a' which is an array of characters of size 20 bytes.
 <br>
-	<p align="center">
-  		<img width="614" height="39" src="https://fir3wa1-k3r.github.io/imgs/pwn_1.png">	
-	</p>
+  		<img width="614" height="39" src="https://fir3wa1-k3r.github.io/imgs/pwn_1.png">
 <br>
 When we run the file command on the compiled binary we see that its a 64 bit ELF and is not stipped which means that the debugging symbols are enabled. And the checksec command tells that only the Non executable stack protection (NX) is enabled which means that we can't just put shellcode on the stack and execute it. If we try to do it, we will end up in segmentation fault.
 <br>
