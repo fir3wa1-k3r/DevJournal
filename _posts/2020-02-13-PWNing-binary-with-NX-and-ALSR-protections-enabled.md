@@ -55,7 +55,7 @@ For that we need to understand what is PLT and GOT. You can read more about it <
 
 For now, i will quickly explain what do they do. Before a function from the dynamically linked library gets called, its real address is unknown. So, when it is first called, there is a slow lookup function called Procedural Linkage Table (PLT) which will calculate the real address of that function and updates it in the GOT. So, we leverage this activity and try to leak the real address of that function.
 
-Lets get into some action now. We will identify the PLT address for the puts function using the objdump utility. 
+Lets get into some action now. We will identify the PLT address for the puts function using the `objdump` utility. 
 <br>
 <p align="center">
   	<img width="600" height="100" src="https://fir3wa1-k3r.github.io/imgs/pwn_8.png">
@@ -139,7 +139,7 @@ After executing the exploit, we see the leaked real address of puts in hex.
   	<img width="614" height="270" src="https://fir3wa1-k3r.github.io/imgs/pwn_20.png">
 </p>
 <br>
-We can calculate the real address where the libc is loaded from the leaked address of puts using some simple calcuations. We also can calculate real addresses of other functions using the same. First we have to identify the offset of the puts function in the libc library. We can use readelf command to read the symbols and to display their offset in libc library. We also need the offset of the system function and the string "/bin/sh" so we can try to spawn a shell. strings command can help to identify the offset of the string "/bin/sh" in libc.
+We can calculate the real address where the libc is loaded from the leaked address of puts using some simple calcuations. We also can calculate real addresses of other functions using the same. First we have to identify the offset of the puts function in the libc library. We can use `readelf` command to read the symbols and to display their offset in libc library. We also need the offset of the system function and the string "/bin/sh" so we can try to spawn a shell. strings command can help to identify the offset of the string "/bin/sh" in libc.
 <br>
 <p align="center">
   	<img width="890" height="185" src="https://fir3wa1-k3r.github.io/imgs/pwn_21.png">
