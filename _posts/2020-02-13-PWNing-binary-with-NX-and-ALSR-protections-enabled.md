@@ -101,7 +101,7 @@ Lets continue executing and then we hit our second breakpoint. Now it is populat
   		<img width="320" height="80" src="https://fir3wa1-k3r.github.io/imgs/pwn_14.png">
 </p>
 <br>
-Now, lets try to leak this address using the ROP gadgets. The gadgets in the ROP are simple the sequence of assembly level instruction which we can leverage to alter the flow of execution of the program. As we all know, in the 64-bit calling convension, the arguments for a function are first populated in the registers and then the function gets called. So, the sequence of registers that store the paramters are rdi, rsi, rdx, rcx etc. So the address of the first, second, third and fourth arguments of a functions will be populated into the rdi, rsi, rdx, rcx etc.
+Now, lets try to leak this address using the ROP gadgets. The gadgets in the ROP are simple the sequence of assembly level instruction which we can leverage to alter the flow of execution of the program. As we all know, in the 64-bit calling convension, the arguments for a function are first populated in the registers and then the function gets called. So, the sequence of registers that store the paramters are RDI, RSI, RDX, RCX etc. So the address of the first, second, third and fourth arguments of a functions will be populated into the RDI, RSI, RDX, RCX etc.
 
 We can use the program called ROPgadget to find the required gadgets.
 <br>
