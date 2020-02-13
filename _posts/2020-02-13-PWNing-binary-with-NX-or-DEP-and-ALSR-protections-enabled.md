@@ -23,7 +23,7 @@ Let's run the binary and see what it does. It just ask for the user input and th
 Now let's test whether we have a buffer overflow or not (even though we know it is).
 <br>
 <p align="center">
-  	<img width="614" height="100" src="https://fir3wa1-k3r.github.io/imgs/pwn_4.png">
+  	<img width="574" height="80" src="https://fir3wa1-k3r.github.io/imgs/pwn_4.png">
 </p>
 <br>
 And yes! we received a 'Segmentation fault' which means that we are trying to read/write to some part of the memory where we don't have permission for it.
