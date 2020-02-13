@@ -130,13 +130,13 @@ When we execute it we leak the real address of the puts function in libc.
 So, after that we tweak the exploit code to display the leaked address in a nice hex value.
 <br>
 <p align="center">
-  	<img width="614" height="39" src="https://fir3wa1-k3r.github.io/imgs/pwn_19.png">
+  	<img width="614" height="200" src="https://fir3wa1-k3r.github.io/imgs/pwn_19.png">
 </p>
 <br>
 After executing the exploit, we see the leaked real address of puts in hex.
 <br>
 <p align="center">
-  	<img width="614" height="39" src="https://fir3wa1-k3r.github.io/imgs/pwn_20.png">
+  	<img width="614" height="200" src="https://fir3wa1-k3r.github.io/imgs/pwn_20.png">
 </p>
 <br>
 We can calculate the real address where the libc is loaded from the leaked address of puts using some simple calcuations. We also can calculate real addresses of other functions using the same. First we have to identify the offset of the puts function in the libc library. We can use readelf command to read the symbols and to display their offset in libc library. We also need the offset of the system function and the string "/bin/sh" so we can try to spawn a shell. strings command can help to identify the offset of the string "/bin/sh" in libc.
