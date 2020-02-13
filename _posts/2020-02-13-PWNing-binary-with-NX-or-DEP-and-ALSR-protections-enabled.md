@@ -45,7 +45,7 @@ The offset is at 40. So, we can fill up junk until 40 character and after which 
 We also see that ALSR is enabled on the server which is why libc's base address gets changed everytime when we run the ldd command on the vulnerable binary.
 <br>
 <p align="center">
-  	<img width="614" height="250" src="https://fir3wa1-k3r.github.io/imgs/pwn_7.png">
+  	<img width="714" height="250" src="https://fir3wa1-k3r.github.io/imgs/pwn_7.png">
 </p>
 <br>
 So, we can try to leak the real address of one of the functions in libc library so that we can calculate the libc's base address and even call other libc function just by knowing their base address. Isn't that cool!!
