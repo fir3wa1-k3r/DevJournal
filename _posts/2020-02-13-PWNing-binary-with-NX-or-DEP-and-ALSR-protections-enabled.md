@@ -10,43 +10,43 @@ Hola people, today lets try to pwn a binary which has NX/DEP protection and the 
 <br>
 When we run the file command on the compiled binary we see that its a 64 bit ELF and is not stipped which means that the debugging symbols are enabled. And the checksec command tells that only the Non executable stack protection (NX) is enabled which means that we can't just put shellcode on the stack and execute it. If we try to do it, we will end up in segmentation fault.
 <br>
-	<p align="center">
-  		<img width="614" height="39" src="https://fir3wa1-k3r.github.io/imgs/pwn_2.png">	
-	</p>
+<p align="center">
+  	<img width="614" height="39" src="https://fir3wa1-k3r.github.io/imgs/pwn_2.png">	
+</p>
 <br>
 Let's run the binary and see what it does. It just ask for the user input and then prints out "Thanks!".
 <br>
-	<p align="center">
-  		<img width="614" height="39" src="https://fir3wa1-k3r.github.io/imgs/pwn_3.png">	
-	</p>
+<p align="center">
+  	<img width="614" height="39" src="https://fir3wa1-k3r.github.io/imgs/pwn_3.png">	
+</p>
 <br>
 Now let's test whether we have a buffer overflow or not (even though we know it is).
 <br>
-	<p align="center">
-  		<img width="614" height="39" src="https://fir3wa1-k3r.github.io/imgs/pwn_4.png">
-	</p>
+<p align="center">
+  	<img width="614" height="39" src="https://fir3wa1-k3r.github.io/imgs/pwn_4.png">
+</p>
 <br>
 And yes! we received a 'Segmentation fault' which means that we are trying to read/write to some part of the memory where we don't have permission for it.
  
 So, we can find the offset until which we can fill out junk data and whatever is sent after it will overwrite the return address. Let's use gdb to find the offset.
 <br>
-	<p align="center">
-  		<img width="614" height="39" src="https://fir3wa1-k3r.github.io/imgs/pwn_5.png">
-	</p>
+<p align="center">
+  	<img width="614" height="39" src="https://fir3wa1-k3r.github.io/imgs/pwn_5.png">
+</p>
 <br>
 We create a cyclic pattern of 100 characters in length and input that to our vulnerable binary.
 <br>
-	<p align="center">
-  		<img width="614" height="39" src="https://fir3wa1-k3r.github.io/imgs/pwn_6.png">
-	</p>
+<p align="center">
+  	<img width="614" height="39" src="https://fir3wa1-k3r.github.io/imgs/pwn_6.png">
+</p>
 <br>
 The offset is at 40. So, we can fill up junk until 40 character and after which the return address will be modified by data specified by the attacker. Now we have the control of the instruction pointer.
 
 We also see that ALSR is enabled on the server which is why libc's base address gets changed everytime when we run the ldd command on the vulnerable binary.
 <br>
-	<p align="center">
-  		<img width="614" height="39" src="https://fir3wa1-k3r.github.io/imgs/pwn_7.png">
-	</p>
+<p align="center">
+  	<img width="614" height="39" src="https://fir3wa1-k3r.github.io/imgs/pwn_7.png">
+</p>
 <br>
 So, we can try to leak the real address of one of the functions in libc library so that we can calculate the libc's base address and even call other libc function just by knowing their base address. Isn't that cool!!
 We use Return Oriented Programming (ROP) method in this post to bypass the NX/DEP protection. It is one of the best attacks which you can use to break NX protection.
@@ -57,45 +57,45 @@ For now, i will quickly explain what do they do. Before a function from the dyna
 
 Lets get into some action now. We will identify the PLT address for the puts function using the objdump utility. 
 <br>
-	<p align="center">
-  		<img width="614" height="39" src="https://fir3wa1-k3r.github.io/imgs/pwn_8.png">
-	</p>
+<p align="center">
+  	<img width="614" height="39" src="https://fir3wa1-k3r.github.io/imgs/pwn_8.png">
+</p>
 <br>
 From the PLT address of the puts fuction we can try to find out the GOT entry for puts. 
 <br>
-	<p align="center">
-  		<img width="614" height="39" src="https://fir3wa1-k3r.github.io/imgs/pwn_9.png">
-	</p>
+<p align="center">
+  	<img width="614" height="39" src="https://fir3wa1-k3r.github.io/imgs/pwn_9.png">
+</p>
 <br>
 So here the address of the GOT entry for puts is 0x601018. If we try to see what value is present it that location, we see that it is pointing back to the next instruction of the PLT. This is before the real address of puts function is calcuated. We can see later how the real address get populated in the GOT entry when we start executing the vulnerable binary.
 <br>
-	<p align="center">
-  		<img width="614" height="39" src="https://fir3wa1-k3r.github.io/imgs/pwn_9.png">
-	</p>
+<p align="center">
+  	<img width="614" height="39" src="https://fir3wa1-k3r.github.io/imgs/pwn_9.png">
+</p>
 <br>
 You can also see the PLT and GOT memory regions using the command "info files" in the gdb.
 <br>
-	<p align="center">
-  		<img width="614" height="39" src="https://fir3wa1-k3r.github.io/imgs/pwn_10.png">
-	</p>
+<p align="center">
+  	<img width="614" height="39" src="https://fir3wa1-k3r.github.io/imgs/pwn_10.png">
+</p>
 <br>
 Now, lets see how the real address gets populated in the GOT. We set a break point before and after the calling the puts function.
 <br>
-	<p align="center">
-  		<img width="614" height="39" src="https://fir3wa1-k3r.github.io/imgs/pwn_11.png">
-	</p>
+<p align="center">
+  	<img width="614" height="39" src="https://fir3wa1-k3r.github.io/imgs/pwn_11.png">
+</p>
 <br>
 If we execute the binary, we hit our first breakpoint. Now, lets check the contents of GOT entry for the puts function. We see still its pointing to the next instruction of PLT.
 <br>
-	<p align="center">
-  		<img width="614" height="39" src="https://fir3wa1-k3r.github.io/imgs/pwn_12.png">
-	</p>
+<p align="center">
+  	<img width="614" height="39" src="https://fir3wa1-k3r.github.io/imgs/pwn_12.png">
+</p>
 <br>
 Let continue executing and now hit our second breakpoint. Now it is populated with the real address of the puts function after it gets executed.
 <br>
-	<p align="center">
-  		<img width="614" height="39" src="https://fir3wa1-k3r.github.io/imgs/pwn_13.png">
-	</p>
+<p align="center">
+  	<img width="614" height="39" src="https://fir3wa1-k3r.github.io/imgs/pwn_13.png">
+</p>
 <br>
 Now, lets try to leak this address using the ROP gadgets. The gadgets in the ROP are simple the sequence of assembly level instruction which we can leverage to alter the flow of execution of the program. As we all know, in the 64-bit calling convension, the arguments for a function are first populated in the registers and then the function gets called. So, the sequence of registers that store the paramters are rdi, rsi, rdx, rcx etc. So the address of the first, second, third and fourth arguments of a functions will be populated into the rdi, rsi, rdx, rcx etc.
 
@@ -107,44 +107,44 @@ We can use the program called ROPgadget to find the required gadgets.
 <br>
 We choose "pop rdi; ret" gadget so that, the first argument for the function will be popped into rdi and then the ret instruction will tell the CPU to jump to RSP which intern executes the function that is pointed by RSP. Lets get the PLT entry for the main function so that we can call it again to continue our exploitation. If we just call the main function once, it is waste to leak the address of puts as the libc will be loaded to new address everytime our vulnerable binary gets executed. 
 <br>
-	<p align="center">
-  		<img width="614" height="39" src="https://fir3wa1-k3r.github.io/imgs/pwn_15.png">
-	</p>
+<p align="center">
+  	<img width="614" height="39" src="https://fir3wa1-k3r.github.io/imgs/pwn_15.png">
+</p>
 <br>
 Now, let us the pwntools utility to craft a simple exploit to leak the real address of puts. This is how the exploit look. 
 <br>
-	<p align="center">
-  		<img width="614" height="39" src="https://fir3wa1-k3r.github.io/imgs/pwn_16.png">
-	</p>
+<p align="center">
+  	<img width="614" height="39" src="https://fir3wa1-k3r.github.io/imgs/pwn_16.png">
+</p>
 <br>
 When we execute it we leak the real address of the puts function in libc. 
 <br>
-	<p align="center">
-  		<img width="614" height="39" src="https://fir3wa1-k3r.github.io/imgs/pwn_17.png">
-	</p>
+<p align="center">
+  	<img width="614" height="39" src="https://fir3wa1-k3r.github.io/imgs/pwn_17.png">
+</p>
 <br>
 So, after that we tweak the exploit code to display the leaked address in a nice hex value.
 <br>
-	<p align="center">
-  		<img width="614" height="39" src="https://fir3wa1-k3r.github.io/imgs/pwn_18.png">
-	</p>
+<p align="center">
+  	<img width="614" height="39" src="https://fir3wa1-k3r.github.io/imgs/pwn_18.png">
+</p>
 <br>
 So after executing the exploit, we see the leaked real address of puts in hex.
 <br>
-	<p align="center">
-  		<img width="614" height="39" src="https://fir3wa1-k3r.github.io/imgs/pwn_19.png">
-	</p>
+<p align="center">
+  	<img width="614" height="39" src="https://fir3wa1-k3r.github.io/imgs/pwn_19.png">
+</p>
 <br>
 <br>
-	<p align="center">
-  		<img width="614" height="39" src="https://fir3wa1-k3r.github.io/imgs/pwn_20.png">
-	</p>
+<p align="center">
+  	<img width="614" height="39" src="https://fir3wa1-k3r.github.io/imgs/pwn_20.png">
+</p>
 <br>
 We can calculate the real address where the libc is loaded from the leaked address of puts using some simple calcuations. We also can calculate real addresses of other functions using the same. First we have to identify the offset of the puts function in the libc library. We can use readelf command to read the symbols and to display their offset in libc library. We also need the offset of the system function and the string "/bin/sh" so we can try to spawn a shell. strings command can help to identify the offset of the string "/bin/sh" in libc.
 <br>
-	<p align="center">
-  		<img width="614" height="39" src="https://fir3wa1-k3r.github.io/imgs/pwn_21.png">
-	</p>
+<p align="center">
+  	<img width="614" height="39" src="https://fir3wa1-k3r.github.io/imgs/pwn_21.png">
+</p>
 <br>
 Now, we calculate the base and real addresses using the below formula:
 
@@ -213,7 +213,7 @@ p.interactive()
 <br>
 So, when we execute the exploit, it first leaks the real address of puts from the GOT in stage 1 and then calculate the real address of system and "/bin/sh". Finally it calls the system function with "/bin/sh" as the argument to it using the same " pop rdi; ret" gadget.
 <br>
-	<p align="center">
-  		<img width="614" height="39" src="https://fir3wa1-k3r.github.io/imgs/pwn_2.png">
-	</p>
+<p align="center">
+  	<img width="614" height="39" src="https://fir3wa1-k3r.github.io/imgs/pwn_2.png">
+</p>
 <br>
