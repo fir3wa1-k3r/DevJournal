@@ -76,7 +76,7 @@ So here the address of the GOT entry for puts is 0x601018. If we try to see what
 You can also see the PLT and GOT memory regions using the command "info files" in the gdb.
 <br>
 <p align="center">
-  	<img width="614" height="39" src="https://fir3wa1-k3r.github.io/imgs/pwn_10.png">
+  	<img width="614" height="80" src="https://fir3wa1-k3r.github.io/imgs/pwn_10.png">
 </p>
 <br>
 Now, lets see how the real address gets populated in the GOT. We set a break point before and after the calling the puts function.
