@@ -37,7 +37,7 @@ So, we can find the offset until which we can fill out junk data and whatever is
 We create a cyclic pattern of 100 characters in length and input that to our vulnerable binary.
 <br>
 <p align="center">
-  	<img width="814" height="380" src="https://fir3wa1-k3r.github.io/imgs/pwn_6.png">
+  	<img width="814" height="400" src="https://fir3wa1-k3r.github.io/imgs/pwn_6.png">
 </p>
 <br>
 The offset is at 40. So, we can fill up junk until 40 character and after which the return address will be modified by data specified by the attacker. Now we have the control of the instruction pointer.
