@@ -150,7 +150,7 @@ Now, we calculate the base and real addresses using the below formula:
 libc base address = leaked real puts address - offset of puts
 real system address = libc base address + offset of system<br>
 real system address = libc base address + offset of "/bin/sh"
-
+<br>
 So, here is the overall exploit to pwn the binary and spawn a shell.
 <br>
 {% highlight ruby %} 
