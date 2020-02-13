@@ -17,7 +17,7 @@ When we run the file command on the compiled binary we see that its a 64 bit ELF
 Let's run the binary and see what it does. It just ask for the user input and then prints out "Thanks!".
 <br>
 <p align="center">
-  	<img width="340" height="80" src="https://fir3wa1-k3r.github.io/imgs/pwn_3.png">	
+  	<img width="280" height="80" src="https://fir3wa1-k3r.github.io/imgs/pwn_3.png">	
 </p>
 <br>
 Now let's test whether we have a buffer overflow or not (even though we know it is).
