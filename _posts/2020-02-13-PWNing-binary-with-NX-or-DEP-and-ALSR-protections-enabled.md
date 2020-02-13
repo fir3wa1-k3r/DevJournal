@@ -118,7 +118,7 @@ We choose "pop rdi; ret" gadget so that, the first argument for the function wil
 Now, let us the pwntools utility to craft a simple exploit to leak the real address of puts. This is how the exploit look. 
 <br>
 <p align="center">
-  	<img width="614" height="39" src="https://fir3wa1-k3r.github.io/imgs/pwn_17.png">
+  	<img width="614" height="400" src="https://fir3wa1-k3r.github.io/imgs/pwn_17.png">
 </p>
 <br>
 When we execute it we leak the real address of the puts function in libc. 
