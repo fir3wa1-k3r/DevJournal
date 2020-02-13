@@ -58,7 +58,7 @@ For now, i will quickly explain what do they do. Before a function from the dyna
 Lets get into some action now. We will identify the PLT address for the puts function using the objdump utility. 
 <br>
 <p align="center">
-  	<img width="400" height="100" src="https://fir3wa1-k3r.github.io/imgs/pwn_8.png">
+  	<img width="500" height="100" src="https://fir3wa1-k3r.github.io/imgs/pwn_8.png">
 </p>
 <br>
 From the PLT address of the puts fuction we can try to find out the GOT entry for puts. 
