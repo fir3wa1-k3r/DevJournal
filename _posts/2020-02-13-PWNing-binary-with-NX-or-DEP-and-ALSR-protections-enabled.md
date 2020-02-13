@@ -73,7 +73,6 @@ So here the address of the GOT entry for puts is 0x601018. If we try to see what
   	<img width="614" height="80" src="https://fir3wa1-k3r.github.io/imgs/pwn_9.png">
 </p>
 <br>
-<br>
 <p align="center">
   	<img width="350" height="40" src="https://fir3wa1-k3r.github.io/imgs/pwn_10.png">
 </p>
