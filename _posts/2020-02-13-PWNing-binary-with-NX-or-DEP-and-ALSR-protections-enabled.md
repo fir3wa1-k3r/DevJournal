@@ -5,25 +5,25 @@ published: true
 Hola people, today lets try to pwn a binary which has NX/DEP protection and the machine has ALSR enabled. I have written a simple C program which utilizes the vulnerable function gets to read the user input. The user input is read into the variable 'a' which is an array of characters of size 20 bytes.
 <br>
 <p align="center">
-  		<img width="614" height="100" src="https://fir3wa1-k3r.github.io/imgs/pwn_1.png">
+  		<img width="214" height="100" src="https://fir3wa1-k3r.github.io/imgs/pwn_1.png">
 </p>
 <br>
 When we run the file command on the compiled binary we see that its a 64 bit ELF and is not stipped which means that the debugging symbols are enabled. And the checksec command tells that only the Non executable stack protection (NX) is enabled which means that we can't just put shellcode on the stack and execute it. If we try to do it, we will end up in segmentation fault.
 <br>
 <p align="center">
-  	<img width="614" height="39" src="https://fir3wa1-k3r.github.io/imgs/pwn_2.png">	
+  	<img width="614" height="100" src="https://fir3wa1-k3r.github.io/imgs/pwn_2.png">	
 </p>
 <br>
 Let's run the binary and see what it does. It just ask for the user input and then prints out "Thanks!".
 <br>
 <p align="center">
-  	<img width="614" height="39" src="https://fir3wa1-k3r.github.io/imgs/pwn_3.png">	
+  	<img width="214" height="39" src="https://fir3wa1-k3r.github.io/imgs/pwn_3.png">	
 </p>
 <br>
 Now let's test whether we have a buffer overflow or not (even though we know it is).
 <br>
 <p align="center">
-  	<img width="614" height="39" src="https://fir3wa1-k3r.github.io/imgs/pwn_4.png">
+  	<img width="614" height="100" src="https://fir3wa1-k3r.github.io/imgs/pwn_4.png">
 </p>
 <br>
 And yes! we received a 'Segmentation fault' which means that we are trying to read/write to some part of the memory where we don't have permission for it.
@@ -31,7 +31,7 @@ And yes! we received a 'Segmentation fault' which means that we are trying to re
 So, we can find the offset until which we can fill out junk data and whatever is sent after it will overwrite the return address. Let's use gdb to find the offset.
 <br>
 <p align="center">
-  	<img width="614" height="39" src="https://fir3wa1-k3r.github.io/imgs/pwn_5.png">
+  	<img width="614" height="200" src="https://fir3wa1-k3r.github.io/imgs/pwn_5.png">
 </p>
 <br>
 We create a cyclic pattern of 100 characters in length and input that to our vulnerable binary.
