@@ -2,7 +2,7 @@
 published: true
 ---
 
-Hola people, today lets try to pwn a binary which has NX/DEP protection and the machine has ALSR enabled. I have written a simple C program which utilizes the vulnerable function gets to read the user input. The user input is read into the variable 'a' which is an array of characters of size 20 bytes.
+Hola people, today lets try to pwn a binary which has NX/DEP protection and the machine has ALSR enabled. I have written a simple C program which utilizes the vulnerable function gets to read the user input. The user input is read into the variable 'a' which is an array of 20 characters.
 <br>
 <p align="center">
   		<img width="400" height="250" src="https://fir3wa1-k3r.github.io/imgs/pwn_1.png">
