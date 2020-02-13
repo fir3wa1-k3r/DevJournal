@@ -88,7 +88,7 @@ Now, lets see how the real address gets populated in the GOT. We set a break poi
 If we execute the binary, we hit our first breakpoint. Now, lets check the contents of GOT entry for the puts function. We see still its pointing to the next instruction of PLT.
 <br>
 <p align="center">
-  	<img width="614" height="39" src="https://fir3wa1-k3r.github.io/imgs/pwn_12.png">
+  	<img width="614" height="150" src="https://fir3wa1-k3r.github.io/imgs/pwn_12.png">
 </p>
 <br>
 Let continue executing and now hit our second breakpoint. Now it is populated with the real address of the puts function after it gets executed.
