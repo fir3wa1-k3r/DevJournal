@@ -210,7 +210,7 @@ p.recv()
 p.interactive()
 {% endhighlight %}
 <br>
-So, when we execute the exploit, it first leaks the real address of puts from the GOT in stage 1 and then calculate the real address of system and "/bin/sh". Finally it calls the system function with "/bin/sh" as the argument to it using the same " pop rdi; ret" gadget.
+So, when we execute the exploit, it first leaks the real address of puts from the GOT in stage 1 and then calculate the real address of system and "/bin/sh". Finally it calls the system function with "/bin/sh" as the argument to it using the same `pop rdi; ret` gadget.
 <br>
 <p align="center">
   	<img width="590" height="340" src="https://fir3wa1-k3r.github.io/imgs/pwn_22.png">
