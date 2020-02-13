@@ -73,68 +73,68 @@ So here the address of the GOT entry for puts is 0x601018. If we try to see what
   	<img width="614" height="80" src="https://fir3wa1-k3r.github.io/imgs/pwn_9.png">
 </p>
 <br>
-You can also see the PLT and GOT memory regions using the command "info files" in the gdb.
 <br>
 <p align="center">
   	<img width="350" height="40" src="https://fir3wa1-k3r.github.io/imgs/pwn_10.png">
 </p>
 <br>
-Now, lets see how the real address gets populated in the GOT. We set a break point before and after the calling the puts function.
+You can also see the PLT and GOT memory regions using the command "info files" in the gdb.
 <br>
 <p align="center">
   	<img width="714" height="150" src="https://fir3wa1-k3r.github.io/imgs/pwn_11.png">
 </p>
 <br>
-If we execute the binary, we hit our first breakpoint. Now, lets check the contents of GOT entry for the puts function. We see still its pointing to the next instruction of PLT.
+Now, lets see how the real address gets populated in the GOT. We set a break point before and after the calling the puts function.
 <br>
 <p align="center">
   	<img width="614" height="150" src="https://fir3wa1-k3r.github.io/imgs/pwn_12.png">
 </p>
 <br>
-Let continue executing and now hit our second breakpoint. Now it is populated with the real address of the puts function after it gets executed.
+If we execute the binary, we hit our first breakpoint. Now, lets check the contents of GOT entry for the puts function. We see still its pointing to the next instruction of PLT.
 <br>
 <p align="center">
   	<img width="204" height="39" src="https://fir3wa1-k3r.github.io/imgs/pwn_13.png">
 </p>
 <br>
-Now, lets try to leak this address using the ROP gadgets. The gadgets in the ROP are simple the sequence of assembly level instruction which we can leverage to alter the flow of execution of the program. As we all know, in the 64-bit calling convension, the arguments for a function are first populated in the registers and then the function gets called. So, the sequence of registers that store the paramters are rdi, rsi, rdx, rcx etc. So the address of the first, second, third and fourth arguments of a functions will be populated into the rdi, rsi, rdx, rcx etc.
-
-We can use the program called ROPgadget to find the required gadgets.
+Let continue executing and now hit our second breakpoint. Now it is populated with the real address of the puts function after it gets executed.
 <br>
 	<p align="center">
   		<img width="614" height="39" src="https://fir3wa1-k3r.github.io/imgs/pwn_14.png">
 	</p>
 <br>
-We choose "pop rdi; ret" gadget so that, the first argument for the function will be popped into rdi and then the ret instruction will tell the CPU to jump to RSP which intern executes the function that is pointed by RSP. Lets get the PLT entry for the main function so that we can call it again to continue our exploitation. If we just call the main function once, it is waste to leak the address of puts as the libc will be loaded to new address everytime our vulnerable binary gets executed. 
+Now, lets try to leak this address using the ROP gadgets. The gadgets in the ROP are simple the sequence of assembly level instruction which we can leverage to alter the flow of execution of the program. As we all know, in the 64-bit calling convension, the arguments for a function are first populated in the registers and then the function gets called. So, the sequence of registers that store the paramters are rdi, rsi, rdx, rcx etc. So the address of the first, second, third and fourth arguments of a functions will be populated into the rdi, rsi, rdx, rcx etc.
+
+We can use the program called ROPgadget to find the required gadgets.
 <br>
 <p align="center">
   	<img width="614" height="39" src="https://fir3wa1-k3r.github.io/imgs/pwn_15.png">
 </p>
 <br>
-Now, let us the pwntools utility to craft a simple exploit to leak the real address of puts. This is how the exploit look. 
+We choose "pop rdi; ret" gadget so that, the first argument for the function will be popped into rdi and then the ret instruction will tell the CPU to jump to RSP which intern executes the function that is pointed by RSP. Lets get the PLT entry for the main function so that we can call it again to continue our exploitation. If we just call the main function once, it is waste to leak the address of puts as the libc will be loaded to new address everytime our vulnerable binary gets executed. 
 <br>
 <p align="center">
   	<img width="614" height="39" src="https://fir3wa1-k3r.github.io/imgs/pwn_16.png">
 </p>
 <br>
-When we execute it we leak the real address of the puts function in libc. 
+Now, let us the pwntools utility to craft a simple exploit to leak the real address of puts. This is how the exploit look. 
 <br>
 <p align="center">
   	<img width="614" height="39" src="https://fir3wa1-k3r.github.io/imgs/pwn_17.png">
 </p>
 <br>
-So, after that we tweak the exploit code to display the leaked address in a nice hex value.
+When we execute it we leak the real address of the puts function in libc. 
 <br>
 <p align="center">
   	<img width="614" height="39" src="https://fir3wa1-k3r.github.io/imgs/pwn_18.png">
 </p>
 <br>
-So after executing the exploit, we see the leaked real address of puts in hex.
+So, after that we tweak the exploit code to display the leaked address in a nice hex value.
 <br>
 <p align="center">
   	<img width="614" height="39" src="https://fir3wa1-k3r.github.io/imgs/pwn_19.png">
 </p>
 <br>
+After executing the exploit, we see the leaked real address of puts in hex.
 <br>
 <p align="center">
   	<img width="614" height="39" src="https://fir3wa1-k3r.github.io/imgs/pwn_20.png">
