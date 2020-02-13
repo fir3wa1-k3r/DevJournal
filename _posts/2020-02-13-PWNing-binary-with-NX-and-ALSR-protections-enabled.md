@@ -53,7 +53,7 @@ We use Return Oriented Programming (ROP) method in this post to bypass the NX/DE
 From the source code of the vulnerable program we see that puts and gets are the libc function that are called. So, we can try to leak the real address of puts from the Global Offset Table (GOT) and then use that address to calcuate the libc's base address.
 For that we need to understand what is PLT and GOT. You can read more about it <a href="https://www.technovelty.org/linux/plt-and-got-the-key-to-code-sharing-and-dynamic-libraries.html"> here</a>.
 
-For now, i will quickly explain what do they do. Before a function from the dynamically linked library gets called, its real address is unknown. So, when it is first called, there is a slow lookup function called Procedural Linkage Table (PLT) which will calculate the real address of that function and updates it in the GOT table. So, we leverage this activity and try to leak the real address of that function.
+For now, i will quickly explain what do they do. Before a function from the dynamically linked library gets called, its real address is unknown. So, when it is first called, there is a slow lookup function called Procedural Linkage Table (PLT) which will calculate the real address of that function and updates it in the GOT. So, we leverage this activity and try to leak the real address of that function.
 
 Lets get into some action now. We will identify the PLT address for the puts function using the objdump utility. 
 <br>
